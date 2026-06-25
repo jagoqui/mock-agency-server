@@ -1,0 +1,131 @@
+{
+    "router": {
+        "metadata": {
+            "prompt_id": "router_gemini-3-pro",
+            "version": "1.0",
+            "owner": ""
+        },
+        "template": {
+            "system_prompt": [
+                {
+                    "name": "system_prompt",
+                    "content": ""
+                }
+            ]
+        },
+        "agencies": [
+            {
+                "name": "software-factory",
+                "description": "Diseño y desarrollo de software con flujos SDD y ciclos Ralph",
+                "triggers": [
+                    "diseño de software",
+                    "modelado de dominio",
+                    "arquitectura",
+                    "SDD",
+                    "Ralph",
+                    "desarrollo",
+                    "crear aplicación",
+                    "desarrollar"
+                ]
+            },
+            {
+                "name": "data-platform",
+                "description": "Análisis de datos, SQL y generación de reportes",
+                "triggers": [
+                    "análisis de datos",
+                    "SQL",
+                    "reportes",
+                    "base de datos",
+                    "query",
+                    "datos",
+                    "analizar"
+                ]
+            },
+            {
+                "name": "devops-hub",
+                "description": "DevOps, CI/CD, infraestructura y despliegues",
+                "triggers": [
+                    "devops",
+                    "CI/CD",
+                    "infraestructura",
+                    "deploy",
+                    "despliegue",
+                    "kubernetes",
+                    "docker"
+                ]
+            }
+        ],
+        "config": {
+            "model": "gemini-3-1",
+            "temperature": 0.1,
+            "provider": "google"
+        }
+    },
+    "agencies": [
+        {
+            "id": "software-factory",
+            "metadata": {
+                "prompt_id": "coder_google_gemini-3-pro",
+                "version": "1.0",
+                "owner": ""
+            },
+            "template": {
+                "system_prompt": [
+                    {
+                        "name": "system_prompt",
+                        "content": ""
+                    }
+                ],
+                "user_prompt_template": [],
+                "skills": [
+                    {
+                        "SKILL.md": "",
+                        "assets/semantic-naming-guide.md": "",
+                        "scripts/analyze-ast-clean-code.ts": "",
+                        "references/tsconfig.strict.json": ""
+                    }
+                ],
+                "mcp_tools": [
+                    "engram",
+                    "playwright",
+                    "sinergia"
+                ],
+                "sub_agents": [
+                    {
+                        "name": "coder",
+                        "description": "",
+                        "template": {
+                            "system_prompt": [
+                                {
+                                    "name": "principal",
+                                    "content": ""
+                                }
+                            ],
+                            "skills": [
+                                {
+                                    "SKILL.md": "",
+                                    "assets/semantic-naming-guide.md": "",
+                                    "scripts/analyze-ast-clean-code.ts": "",
+                                    "references/tsconfig.strict.json": ""
+                                }
+                            ],
+                            "mcp_config": [
+                                "sinergia"
+                            ]
+                        },
+                        "config": {
+                            "provider": "anthropic",
+                            "name": "claude-sonnet-4-6",
+                            "temperature": 0.0
+                        }
+                    }
+                ]
+            },
+            "config": {
+                "provider": "anthropic",
+                "name": "claude-sonnet-4-6",
+                "temperature": 0.0
+            }
+        }
+    ]
+}
