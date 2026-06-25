@@ -8,7 +8,7 @@
         "template": {
             "system_prompt": [
                 {
-                    "name": "system_prompt",
+                    "name": "router_agent",
                     "content": ""
                 }
             ]
@@ -72,7 +72,7 @@
             "template": {
                 "system_prompt": [
                     {
-                        "name": "system_prompt",
+                        "name": "software-factory_orchestrator",
                         "content": ""
                     }
                 ],
@@ -97,7 +97,7 @@
                         "template": {
                             "system_prompt": [
                                 {
-                                    "name": "principal",
+                                    "name": "coder_orchestrator",
                                     "content": ""
                                 }
                             ],
