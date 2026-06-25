@@ -97,7 +97,7 @@
                         "template": {
                             "system_prompt": [
                                 {
-                                    "name": "coder_orchestrator",
+                                    "name": "coder_subagent",
                                     "content": ""
                                 }
                             ],
